@@ -1,0 +1,106 @@
+/* 全局样式 */
+/* 样式设置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8c8d0; /* 纯浪漫的粉色背景 */
+    color: #333; /* 默认文字颜色 */
+    text-align: center;
+
+}
+
+#timer {
+    font-size: 48px; /* 增大字体 */
+    font-family: 'Arial', sans-serif; /* 更现代的字体 */
+    color: #d35400; /* 更亮眼的颜色（橙色） */
+    font-weight: bold; /* 加粗字体 */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* 增加阴影效果 */
+    letter-spacing: 2px; /* 增加字母间距 */
+}
+
+/* 年份按钮 */
+#year-buttons {
+    margin: 20px;
+    text-align: center;
+}
+
+#year-buttons button {
+    padding: 15px 30px;
+    margin: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+     background: linear-gradient(135deg, #f1c40f, #f39c12);
+    color: white;
+    border: 2px solid #f39c12; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#year-buttons button:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#year-buttons button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 文章区域 */
+#articles {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 使文章左对齐 */
+    width: 100%; /* 使文章区域占满整个网页宽度 */
+}
+
+/* 文章容器 */
+.year-articles {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    background-color: #f8c8d0;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 20px;
+    width: 90%; /* 容器宽度为 90%，左右有空隙 */
+    max-width: 1200px; /* 设置最大宽度，防止文章内容过于宽 */
+    margin: 10px auto; /* 使每篇文章上下间距均等，并且水平居中 */
+}
+
+/* 文章内容可见时的样式 */
+.year-articles.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+/* 文章中的文字样式 */
+.year-articles p {
+    text-align: left; /* 确保文字左对齐 */
+    line-height: 1.6; /* 增加行距 */
+    color: black; /* 设置文字颜色 */
+    font-size: 18px; /* 设置文字大小 */
+    margin: 40px 0; /* 每段之间增加间距 */
+    text-indent: 2em; /* 段落首行缩进2个字符 */
+}
+
+
+/* 返回主页按钮 */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

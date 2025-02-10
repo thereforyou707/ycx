@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civilizational Challenge</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+            background-color: #fff5e1; /* 温暖色调 */
+        }
+      h1 {
+         font-size: 100px;
+         font-weight: bold;
+         text-align: center;
+         margin-top: -70px; 
+         background: linear-gradient(to right, #ff9a9e, #fad0c4); /* 渐变色 */
+         -webkit-background-clip: text; /* 让文字填充渐变 */
+         color: transparent; /* 透明色，显示渐变 */
+        }
+      p {
+         font-size: 18px;
+         font-family: 'KaiTi', serif;
+         text-align: center; /* 设置居中 */
+        color: white;
+        }
+        .container {
+            max-width: 600px;
+        }
+      .short-sentences {
+            font-size: 40px;
+            font-weight: bold;
+            display: flex; /* 启用Flexbox布局 */
+            gap: 40px; /* 增加短句之间的间距 */
+            align-items: center; /* 确保短句和图片垂直居中 */
+            flex-wrap: nowrap; /* 防止换行 */
+            color: white;
+        }
+
+        /* 锁的图片容器 */
+        .lock-images {
+            display: flex; /* 图片排列在同一行 */
+            gap: 50px; /* 图片之间的间距 */
+            margin-left: -180px;
+        }
+
+        /* 锁图片的大小 */
+        .lock-images img {
+            width: 50px; /* 设置锁图片的宽度 */
+            height: auto; /* 自适应高度 */
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #cc5200;
+        }
+       video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.4);
+        }
+    </style>
+</head>
+<body>
+<video autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+
+    </video>
+    <div class="container">
+        <h1>天启预言</h1>
+        <p>传说，完成了这些挑战的人们会被赐予爱的恒星印记。<br>从此空间的变幻，时间的流转，尽皆黯然。</p><br><br><br><br><br><br>
+         <p class="short-sentences">
+        <span>“望尽天涯路”</span>
+        <span>“一夜鱼龙舞”</span>
+<div class="lock-images">
+        <img src="lock.png" alt="锁1">
+        <img src="lock.png" alt="锁1">
+        <img src="lock.png" alt="锁1">
+ <img src="lock.png" alt="锁1">
+ <img src="lock.png" alt="锁1">
+ <img src="lock.png" alt="锁1">
+ <img src="lock.png" alt="锁1">
+ <img src="lock.png" alt="锁1">
+ <img src="lock.png" alt="锁1">
+ <img src="lock.png" alt="锁1">
+
+</div>
+            </p><br><br><br><br>
+        <a href="index.html">返回玉辰星</a>
+    </div>
+</body>
+</html>

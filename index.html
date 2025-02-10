@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wearehere</title>
+    <style>
+        body {
+            background: black;
+            text-align: center;
+            font-family: "Arial", sans-serif;
+            position: relative;
+            overflow: auto; /* 允许滚动 */
+            min-height: 150vh; /* 确保内容足够长可以滑动 */
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 5em;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: white;
+        }
+
+        img {
+            width: 30%;
+            height: 480px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 按钮间距 */
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 40px 40px;
+            background-color: #FF69B4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px; /* 按钮间距加大 */
+            font-size: 1.5em; 
+        }
+
+        /* 流星效果 */
+        .meteor {
+            position: fixed; /* 让流星固定在屏幕上，不随滚动移动 */
+            background-color: white;
+            width: 4px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 1;
+            animation: meteor-fall linear infinite;
+        }
+
+        @keyframes meteor-fall {
+            0% {
+                transform: translateY(-100px) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(100vw);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎降临「玉辰星」</h1>
+    <div class="container">
+        <p>我们亦可建造</p>
+        <p> 属于我们爱的 “ 罗马 ”</p>
+        <img src="photo1.jpg" alt="我们的照片"> 
+         <br>
+         <br><br><br><br>
+        <div class="buttons">
+            <a href="page2.html">文明 · 挑战</a>
+            <a href="page3.html">星际 · 探索</a>
+            <a href="page4.html">未竟 · 史诗</a>
+            <a href="page5.html">原初 · 秘密</a>
+        </div>
+        <br> <br> <br>
+        <p>25冬 情人节 💕</p>
+    </div>
+
+    <script>
+        const numMeteors = 20; // 设置流星数量
+        const body = document.body;
+
+        function createMeteor() {
+            const meteor = document.createElement('div');
+            meteor.classList.add('meteor');
+
+            const size = Math.random() * 3 + 2;
+            const left = Math.random() * window.innerWidth;
+            const top = Math.random() * window.innerHeight;
+            const duration = Math.random() * 1 + 2;
+
+            meteor.style.width = `${size}px`;
+            meteor.style.height = `${size * 2}px`;
+            meteor.style.left = `${left}px`;
+            meteor.style.top = `${top}px`;
+            meteor.style.animationDuration = `${duration}s`;
+            meteor.style.animationDelay = `${Math.random() * 3}s`;
+
+            document.body.appendChild(meteor);
+
+            meteor.addEventListener('animationend', () => {
+                meteor.remove();
+            });
+        }
+
+        setInterval(createMeteor, 200);
+    </script>
+</body>
+</html>
